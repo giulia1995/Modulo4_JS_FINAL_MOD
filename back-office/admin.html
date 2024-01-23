@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/back-office/assets/back-office.css">
+    <title>Back-office form</title>
+
+</head>
+
+<body>
+    <h1>Back-office</h1>
+    <form id="productForm">
+        <h2>Add Product Payload</h2>
+        <label for="productName">Nome Prodotto:</label>
+        <input type="text" id="productName" name="productName" required>
+
+        <label for="productDescription">Descrizione:</label>
+        <textarea id="productDescription" name="productDescription" rows="4" required></textarea>
+
+        <label for="productBrand">Brand:</label>
+        <input type="text" id="productBrand" name="productBrand" required>
+
+        <label for="productImageURL">URL Immagine:</label>
+        <input type="url" id="productImageURL" name="productImageURL" required>
+
+        <label for="productPrice">Prezzo:</label>
+        <input type="number" id="productPrice" name="productPrice" step="0.01" required>
+
+        <button type="button" onclick="sendGetRequest()">GET</button>
+        <button type="button" onclick="sendPostRequest()">AGGIUNGI PRODOTTO</button>
+
+        <div id="productListContainer"></div>
+
+        <h2>Modifica</h2>
+        <div id="editForm">
+            <button id="modify" type="button" onclick="showEditForm()">MODIFICA</button>
+            <div id="editOptions" style="display: none;">
+                <label for="productId">ID Prodotto:</label>
+                <input type="text" id="productId" name="productId" required>
+            </div>
+        </div>
+
+        <button id="resetAll" type="button" onclick="resetPage()">RESET ALL</button>
+    </form>
+
+    <script src="/back-office/assets/back-office.js"></script>
+</body>
+
+</html>
