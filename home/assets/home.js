@@ -31,6 +31,7 @@ function createProductCard(product) {
                 onclick="openModal('${product.name}', '${product.description}', '${product.brand}', '${product.price}')">
                   Details
                 </button>
+                
             </div>
         </div>`;
 
@@ -45,3 +46,4 @@ function openModal(name, description, brand, price) {
         <p><strong>Brand:</strong> ${brand}</p>
         <p><strong>Price:</strong> $${price}</p>`;
 }
+openModal()

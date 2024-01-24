@@ -1,3 +1,6 @@
+const sendPost=document.getElementById("sendPost");
+sendPost.addEventListener("click", sendPostRequest);
+
 function sendPostRequest() {
     const apiUrl = 'https://striveschool-api.herokuapp.com/api/product/';
     const apiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWIwNDNmNGNlZjA0ODAwMTgxZGQ1Y2IiLCJpYXQiOjE3MDYwNTA1NDgsImV4cCI6MTcwNzI2MDE0OH0.hOw8a2XqcBA0CgNz8MmbrAlf3HC3b2xAA9cnHmBJBpI';
@@ -32,6 +35,8 @@ function sendPostRequest() {
             console.error('Errore durante l\'aggiunta del prodotto:', error);
         });
 }
+const sendGet=document.getElementById("sendGet");
+sendGet.addEventListener("click",sendGetRequest);
 
 function sendGetRequest() {
     const apiUrl = 'https://striveschool-api.herokuapp.com/api/product/';
@@ -68,6 +73,10 @@ function sendGetRequest() {
             console.error('Errore durante la richiesta GET:', error);
         });
 }
+
+const modify=document.getElementById("modify");
+modify.addEventListener("click", showEditForm);
+
 function showEditForm() {
     const productIdInput = document.createElement('input');
     productIdInput.type = 'text';
@@ -209,8 +218,8 @@ function sendDeleteRequest(productId) {
             console.error('Errore durante la richiesta DELETE:', error);
         });
 }
-
+const reset=document.getElementById("resetAll");
+reset.addEventListener("click", resetPage);
 function resetPage() {
-    // Ricarica la pagina
     location.reload();
 }
