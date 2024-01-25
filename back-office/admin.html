@@ -11,10 +11,10 @@
     <h1>Back-office</h1>
     <form id="productForm">
       <h2>Add Product Payload</h2>
-      <label for="productName">Nome Prodotto:</label>
+      <label for="productName">Product Name:</label>
       <input type="text" id="productName" name="productName" required />
 
-      <label for="productDescription">Descrizione:</label>
+      <label for="productDescription">Description:</label>
       <textarea
         id="productDescription"
         name="productDescription"
@@ -25,10 +25,10 @@
       <label for="productBrand">Brand:</label>
       <input type="text" id="productBrand" name="productBrand" required />
 
-      <label for="productImageURL">URL Immagine:</label>
+      <label for="productImageURL">URL Image:</label>
       <input type="url" id="productImageURL" name="productImageURL" required />
 
-      <label for="productPrice">Prezzo:</label>
+      <label for="productPrice">Price:</label>
       <input
         type="number"
         id="productPrice"
@@ -38,21 +38,23 @@
       />
 
       <button id="sendGet" type="button">GET</button>
-      <button id="sendPost" type="button">AGGIUNGI PRODOTTO</button>
+      <button id="sendPost" type="button">ADD PRODUCT</button>
 
       <div id="productListContainer"></div>
 
-      <h2>Modifica</h2>
+      <h2>EDIT</h2>
       <div id="editForm">
-        <button id="modify" type="button">MODIFICA</button>
+        <button id="modify" type="button">EDIT</button>
         <div id="editOptions" style="display: none">
-          <label for="productId">ID Prodotto:</label>
+          <label for="productId">ID Product:</label>
           <input type="text" id="productId" name="productId" required />
         </div>
       </div>
 
       <button id="resetAll" type="button">RESET ALL</button>
+      <button id="back" type="button"> <a href="/home/index.html">BACK-HOME</a></button>
     </form>
+    
 
     <script src="/back-office/assets/back-office.js"></script>
   </body>
