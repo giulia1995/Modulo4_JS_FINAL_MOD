@@ -30,5 +30,3 @@ function createProductCard(product) {
       <p><strong>Price:</strong> $${price}</p>`;
   };
   
-
-  
