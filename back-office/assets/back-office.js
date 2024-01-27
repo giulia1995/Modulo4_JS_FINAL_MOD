@@ -201,12 +201,12 @@ async function sendPutRequest(productId, fields) {
         });
 
         if (response.ok) {
-            console.log('Prodotto aggiornato con successo.');
+            console.log('Success Upload.');
         } else {
-            console.error('Errore durante l\'aggiornamento del prodotto.');
+            console.error('Error during Upload.');
         }
     } catch (error) {
-        console.error('Errore durante la richiesta PUT:', error);
+        console.error('Error PUT:', error);
     }
 }
 
@@ -224,12 +224,12 @@ async function sendDeleteRequest(productId) {
         });
 
         if (response.ok) {
-            console.log('Prodotto eliminato con successo.');
+            console.log('Product Delete success.');
         } else {
-            console.error('Errore durante l\'eliminazione del prodotto.');
+            console.error('Error Delete.');
         }
     } catch (error) {
-        console.error('Errore durante la richiesta DELETE:', error);
+        console.error('Error Delete request:', error);
     }
 }
 
